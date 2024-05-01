@@ -1,3 +1,4 @@
+import { TYPES } from "../reducers/shoppingReducer";
 
 export const shoppingInitialState = {
     products: [
@@ -9,4 +10,23 @@ export const shoppingInitialState = {
         {id:6, name:"Producto 6", price: 600},
     ],
     cart: []
+}
+
+export function shoppingReducer = (state, action) => {
+    switch (action.type) {
+        case TYPES.ADD_TO_CART:{
+
+        }
+        case TYPES.REMOVE_ONE_FROM_CART:{
+
+        }
+        case TYPES.REMOVE_ALL_FROM_CART:{
+
+        }
+        case TYPES.CLEAR_CART:{
+
+        }
+        default:
+            return state;
+    }
 }
