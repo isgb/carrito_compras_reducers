@@ -21,13 +21,24 @@ export function shoppingReducer(state, action){
             )
             console.log(newItem);
 
-            return{
-                ...state,
-                cart: [
-                    ...state.cart,
-                    newItem
-                ]
-            }
+            let itemCart = state.cart.find(
+                (item) => item.id === newItem.id 
+            ) 
+
+            return itemCart 
+                    ? {} 
+                    : {
+                        ...state, 
+                        cart: [...state.cart,{...newItem, quantity: 1}]
+                    };
+
+            // return{
+            //     ...state,
+            //     cart: [
+            //         ...state.cart,
+            //         newItem
+            //     ]
+            // }
         }
         case TYPES.REMOVE_ONE_FROM_CART:{
 
