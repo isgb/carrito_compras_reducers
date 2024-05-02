@@ -26,7 +26,14 @@ export function shoppingReducer(state, action){
             ) 
 
             return itemCart 
-                    ? {} 
+                    ? {
+                        ...state,
+                        cart: state.cart.map((item) =>
+                            item.id === newItem.id 
+                            ? {...item, quantity: item.quantity + 1}
+                            : item
+                        )
+                    } 
                     : {
                         ...state, 
                         cart: [...state.cart,{...newItem, quantity: 1}]
