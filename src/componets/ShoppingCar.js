@@ -11,7 +11,7 @@ const ShoppingCar = () => {
     const [products, cart] = state;
 
     const addToCart = (id) => {
-        console.log(id)
+        // console.log(id)
         dispatch({type: TYPES.ADD_TO_CART,payload: id})
     }
 
