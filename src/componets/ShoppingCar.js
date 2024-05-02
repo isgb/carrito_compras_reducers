@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 import { shoppingInitialState, shoppingReducer } from './actions/shoppingAction';
 import { ProductoItem } from './ProductoItem';
 import CardItem from './CardItem';
+import { TYPES } from './reducers/shoppingReducer';
 
 const ShoppingCar = () => {
 
@@ -11,6 +12,7 @@ const ShoppingCar = () => {
 
     const addToCart = (id) => {
         console.log(id)
+        dispatch({type: TYPES.ADD_TO_CART,payload: id})
     }
 
     const deleteFromCart = () => {
