@@ -4,5 +4,3 @@ export const TYPES = {
     REMOVE_ALL_FROM_CART : "REMOVE_ALL_FROM_CART",
     CLEAR_CART : "CLEAR_CART"
 }
-
-import { TYPES } from "../reducers/shoppingReducer";

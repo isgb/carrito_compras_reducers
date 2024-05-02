@@ -33,7 +33,7 @@ const ShoppingCar = () => {
                 products.map((product) => (
                     <ProductoItem
                         key={product.id}
-                        data={data}
+                        data={product}
                         addToCart={addToCart}
 
                     />

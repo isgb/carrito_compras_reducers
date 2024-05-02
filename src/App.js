@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { ShoppingCar } from './componets/ShoppingCar';
+import ShoppingCar from './componets/ShoppingCar';
 
 function App() {
   return (
