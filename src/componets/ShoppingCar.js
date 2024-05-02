@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react'
-import { shoppingInitialState, shoppingReducer } from './actions/shoppingAction';
+import { shoppingInitialState, shoppingReducer } from './reducers/shoppingReducer';
 import { ProductoItem } from './ProductoItem';
 import CardItem from './CardItem';
-import { TYPES } from './reducers/shoppingReducer';
+import { TYPES } from './actions/shoppingAction';
 
 const ShoppingCar = () => {
 
