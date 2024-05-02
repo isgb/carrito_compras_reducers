@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react'
 import { shoppingInitialState, shoppingReducer } from './actions/shoppingAction';
 import { ProductoItem } from './ProductoItem';
+import CardItem from './CardItem';
 
 const ShoppingCar = () => {
 
@@ -38,7 +39,12 @@ const ShoppingCar = () => {
             }
         </article>
         <h3>Carrito</h3>
-        <article className='box'></article>
+        <article className='box'>
+            <button onClick={clearCart}>Limpiar Carrito</button>
+            {
+                cart.map((item, index) => <CardItem key={index} data={item} deleteFromCart={deleteFromCart}/>)
+            }
+        </article>
     </div>
   )
 }
