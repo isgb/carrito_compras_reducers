@@ -54,7 +54,7 @@ export function shoppingReducer(state, action){
 
         }
         case TYPES.CLEAR_CART:{
-
+            return shoppingInitialState;
         }
         default:
             return state;

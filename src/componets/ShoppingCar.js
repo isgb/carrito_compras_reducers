@@ -20,7 +20,7 @@ const ShoppingCar = () => {
     }
 
     const clearCart = () => {
-
+        dispatch({type: TYPES.CLEAR_CART})
     }
 
 
