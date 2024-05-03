@@ -9,6 +9,7 @@ const CardItem = ({data, deleteFromCart}) => {
         <button onClick={() => deleteFromCart(id)}>Eliminar Uno</button>
         <br/>
         <button onClick={() => deleteFromCart(id,true)}>Eliminar todos</button>
+        <br/><br/>
     </div>
   )
 }

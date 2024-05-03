@@ -39,13 +39,6 @@ export function shoppingReducer(state, action){
                         cart: [...state.cart,{...newItem, quantity: 1}]
                     };
 
-            // return{
-            //     ...state,
-            //     cart: [
-            //         ...state.cart,
-            //         newItem
-            //     ]
-            // }
         }
         case TYPES.REMOVE_ONE_FROM_CART:{
             let itemToDelete = state.cart.find((item) => item.id === action.payload);
@@ -64,7 +57,10 @@ export function shoppingReducer(state, action){
             };
         }
         case TYPES.REMOVE_ALL_FROM_CART:{
-
+            return {
+                ...state,
+                cart: state.cart.filter((item) => item.id !== action.payload),
+            };
         }
         case TYPES.CLEAR_CART:{
             return shoppingInitialState;
